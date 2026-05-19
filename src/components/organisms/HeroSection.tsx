@@ -18,8 +18,8 @@ export function HeroSection() {
 
   return (
     <section
-      className="flex-1 flex flex-col justify-end relative overflow-hidden"
-      style={{ paddingTop: 'clamp(5rem, 12vh, 8rem)', paddingBottom: 'clamp(3rem, 9vh, 5.5rem)' }}
+      className="flex-1 flex flex-col justify-center relative overflow-hidden"
+      style={{ paddingTop: 'clamp(2.5rem, 7vh, 5rem)', paddingBottom: 'clamp(2.5rem, 7vh, 5rem)' }}
     >
       <AnimatedItem delay={250}>
         <div className="mb-10 inline-flex items-center gap-3 font-display text-[0.66rem] font-semibold uppercase tracking-[0.28em] text-accent">
