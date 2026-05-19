@@ -19,7 +19,7 @@ export function ManifestoSection() {
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none" aria-hidden>
         <span
           className="font-display font-black uppercase whitespace-nowrap text-white/[0.12] drop-shadow-[0_0_28px_rgba(127,212,245,0.12)]"
-          style={{ fontSize: 'clamp(6rem, 18vw, 18rem)', letterSpacing: '0' }}
+          style={{ fontSize: 'clamp(3.5rem, 9vw, 10.5rem)', letterSpacing: '0' }}
         >
           CALIBRESOUTH
         </span>
