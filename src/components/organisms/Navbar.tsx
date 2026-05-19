@@ -14,6 +14,8 @@ export function Navbar() {
             Calibre<span className="text-accent drop-shadow-[0_0_12px_rgba(127,212,245,0.68)]">South</span>
           </span>
         </div>
+
+        <div className="flex items-center gap-3">
           <a href="#early-access" className="rounded-full bg-accent px-5 py-3 font-display text-[0.68rem] font-bold uppercase tracking-[0.22em] text-bg transition-all duration-300 hover:-translate-y-px hover:shadow-[0_0_32px_rgba(127,212,245,0.45)]">
             Join
           </a>
@@ -22,5 +24,3 @@ export function Navbar() {
     </header>
   )
 }
-
-
