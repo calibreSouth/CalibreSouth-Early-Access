@@ -58,7 +58,7 @@ export function PhoneForm({
 
   if (submitted) {
     return (
-      <div className="inline-flex items-center gap-3 rounded-full border border-accent/35 bg-accent/10 px-5 py-[14px] shadow-[0_0_24px_rgba(239,68,68,0.12)]">
+      <div className="inline-flex items-center gap-3 rounded-full border border-accent/35 bg-accent/10 px-5 py-[14px] shadow-[0_0_24px_rgba(127,212,245,0.12)]">
         <svg className="text-accent" width="13" height="13" viewBox="0 0 13 13" fill="none">
           <path d="M1.5 6.5L5 10L11.5 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
@@ -81,7 +81,7 @@ export function PhoneForm({
         <button
           type="submit"
           disabled={loading}
-          className="bg-accent font-display font-bold text-[0.68rem] tracking-[0.22em] text-bg uppercase whitespace-nowrap px-7 h-14 hover:tracking-[0.26em] hover:shadow-[0_0_30px_rgba(239,68,68,0.45)] cursor-pointer transition-all duration-300 disabled:opacity-60"
+          className="bg-accent font-display font-bold text-[0.68rem] tracking-[0.22em] text-bg uppercase whitespace-nowrap px-7 h-14 hover:tracking-[0.26em] hover:shadow-[0_0_30px_rgba(127,212,245,0.45)] cursor-pointer transition-all duration-300 disabled:opacity-60"
         >
           {loading ? '...' : buttonText}
         </button>

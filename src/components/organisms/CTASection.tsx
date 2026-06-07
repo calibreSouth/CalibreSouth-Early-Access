@@ -19,7 +19,7 @@ export function CTASection() {
     <section id="early-access" ref={ref}
       className="cta-section relative z-10 flex flex-col items-center overflow-hidden bg-white px-[clamp(1.4rem,4vw,3rem)] py-24 text-center text-black md:py-36">
       <div className="absolute inset-0 pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse 45% 42% at 50% 42%, rgba(239,68,68,0.22) 0%, transparent 70%)' }} />
+        style={{ background: 'radial-gradient(ellipse 45% 42% at 50% 42%, rgba(127,212,245,0.22) 0%, transparent 70%)' }} />
       <p className="cta-item font-display text-[0.68rem] font-semibold tracking-[0.3em] uppercase text-[#2B8FB8] mb-7">
         Be the first to know
       </p>

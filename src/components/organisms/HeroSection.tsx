@@ -23,7 +23,7 @@ export function HeroSection() {
     >
       <AnimatedItem delay={250}>
         <div className="mb-10 inline-flex items-center gap-3 font-display text-[0.66rem] font-semibold uppercase tracking-[0.28em] text-accent">
-          <span className="h-px w-10 bg-accent shadow-[0_0_12px_rgba(239,68,68,0.75)]" />
+          <span className="h-px w-10 bg-accent shadow-[0_0_12px_rgba(127,212,245,0.75)]" />
           Kozhikode / 2026
         </div>
       </AnimatedItem>
@@ -35,7 +35,7 @@ export function HeroSection() {
           style={{ letterSpacing: '0' }}
         >
           <span ref={line1.elRef} className="block">calibre</span>
-          <span ref={line2.elRef} className="block text-accent drop-shadow-[0_0_28px_rgba(239,68,68,0.55)]">south</span>
+          <span ref={line2.elRef} className="block text-accent drop-shadow-[0_0_28px_rgba(127,212,245,0.55)]">south</span>
         </h1>
       </AnimatedItem>
 
@@ -48,7 +48,7 @@ export function HeroSection() {
 
       <AnimatedItem delay={850} className="h-px overflow-hidden"
         style={{ width: '4rem', marginTop: 'clamp(1.4rem, 2.4vh, 2.25rem)', marginBottom: 'clamp(1.4rem, 2.4vh, 2.25rem)' }}>
-        <div className="animate-divider h-full bg-accent shadow-[0_0_14px_rgba(239,68,68,0.8)]" style={{ animationDelay: '850ms' }} />
+        <div className="animate-divider h-full bg-accent shadow-[0_0_14px_rgba(127,212,245,0.8)]" style={{ animationDelay: '850ms' }} />
       </AnimatedItem>
 
       <AnimatedItem delay={1000}>
@@ -57,7 +57,7 @@ export function HeroSection() {
             <div className="font-display font-black leading-[0.9] uppercase"
               style={{ fontSize: 'clamp(2rem, 4.6vw, 4.6rem)', marginBottom: 'clamp(0.8rem, 1.2vh, 1rem)', letterSpacing: '0' }}>
               <span className="block text-fg">The next</span>
-              <span className="block text-accent drop-shadow-[0_0_24px_rgba(239,68,68,0.55)]">movement</span>
+              <span className="block text-accent drop-shadow-[0_0_24px_rgba(127,212,245,0.55)]">movement</span>
               <span className="block text-fg">starts here.</span>
             </div>
             <p className="font-body font-normal leading-relaxed text-muted text-caption" style={{ maxWidth: '340px' }}>
