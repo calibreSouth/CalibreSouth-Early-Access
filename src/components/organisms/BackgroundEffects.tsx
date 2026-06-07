@@ -21,14 +21,14 @@ function Vignette() {
 function CenterGlow() {
   return (
     <div className="fixed inset-0 pointer-events-none animate-breathe z-1"
-      style={{ background: 'radial-gradient(ellipse 62% 50% at 50% 50%, rgba(127,212,245,0.24) 0%, rgba(127,212,245,0.08) 34%, transparent 70%)' }} />
+      style={{ background: 'radial-gradient(ellipse 62% 50% at 50% 50%, rgba(239,68,68,0.24) 0%, rgba(239,68,68,0.08) 34%, transparent 70%)' }} />
   )
 }
 
 function ScanLines() {
   return (
     <div className="fixed inset-0 pointer-events-none z-2 opacity-[0.18]"
-      style={{ background: 'repeating-linear-gradient(0deg, transparent 0 2px, rgba(127,212,245,0.05) 2px 3px)' }} />
+      style={{ background: 'repeating-linear-gradient(0deg, transparent 0 2px, rgba(239,68,68,0.05) 2px 3px)' }} />
   )
 }
 
@@ -36,16 +36,16 @@ function EdgeLines() {
   return (
     <>
       <div className="fixed top-0 left-0 right-0 h-px pointer-events-none z-2"
-        style={{ background: 'linear-gradient(90deg, transparent, rgba(127,212,245,0.65), transparent)' }} />
+        style={{ background: 'linear-gradient(90deg, transparent, rgba(239,68,68,0.65), transparent)' }} />
       <div className="fixed bottom-0 left-0 right-0 h-px pointer-events-none z-2"
-        style={{ background: 'linear-gradient(90deg, transparent, rgba(127,212,245,0.3), transparent)' }} />
+        style={{ background: 'linear-gradient(90deg, transparent, rgba(239,68,68,0.3), transparent)' }} />
     </>
   )
 }
 
 function CornerBrackets() {
   const size = 22, offset = 20
-  const stroke = 'rgba(127,212,245,0.32)', sw = '0.8'
+  const stroke = 'rgba(239,68,68,0.32)', sw = '0.8'
   const s: React.CSSProperties = { position: 'fixed', pointerEvents: 'none', zIndex: 2 }
   return (
     <>

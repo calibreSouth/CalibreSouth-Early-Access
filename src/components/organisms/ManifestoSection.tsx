@@ -18,7 +18,7 @@ export function ManifestoSection() {
     <section className="relative z-10 overflow-hidden bg-black px-[clamp(1.4rem,4vw,3rem)] py-24 md:py-36 border-b border-white/10">
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none" aria-hidden>
         <span
-          className="font-display font-black uppercase whitespace-nowrap text-white/[0.12] drop-shadow-[0_0_28px_rgba(127,212,245,0.12)]"
+          className="font-display font-black uppercase whitespace-nowrap text-white/[0.12] drop-shadow-[0_0_28px_rgba(239,68,68,0.12)]"
           style={{ fontSize: 'clamp(5.2rem, 13.5vw, 16.5rem)', letterSpacing: '0' }}
         >
           CALIBRESOUTH
@@ -34,7 +34,7 @@ export function ManifestoSection() {
           style={{ fontSize: 'clamp(2.8rem, 7vw, 7rem)', letterSpacing: '0' }}
         >
           One city.<br />
-          <span className="text-accent drop-shadow-[0_0_24px_rgba(127,212,245,0.55)]">
+          <span className="text-accent drop-shadow-[0_0_24px_rgba(239,68,68,0.55)]">
             Every way to move.
           </span>
         </div>
