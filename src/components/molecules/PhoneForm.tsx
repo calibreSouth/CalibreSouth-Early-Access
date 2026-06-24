@@ -11,7 +11,7 @@ export function PhoneForm({
   successMessage = "You're on the list. We'll reach out before launch.",
   note,
 }: PhoneFormProps) {
-  const [phone,     setPhone]     = useState('')
+  const [contact,   setContact]   = useState('')
   const [agreed,    setAgreed]    = useState(false)
   const [submitted, setSubmitted] = useState(() => {
     const leads = JSON.parse(localStorage.getItem('cs_leads') || '[]') as unknown[]
@@ -20,19 +20,34 @@ export function PhoneForm({
   const [loading,   setLoading]   = useState(false)
   const [error,     setError]     = useState('')
 
-  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPhone(e.target.value.replace(/\D/g, '').slice(0, 10))
+  const handleContactChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value
+    if (/[a-zA-Z@]/.test(value)) {
+      setContact(value.replace(/\s/g, '').slice(0, 254))
+    } else {
+      setContact(value.replace(/\D/g, '').slice(0, 10))
+    }
     setError('')
   }
 
+  const isValidEmail = (value: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
+  const isValidPhone = (value: string) => /^\d{10}$/.test(value)
+
   const handleSubmit = async (e: React.BaseSyntheticEvent) => {
     e.preventDefault()
-    if (phone.length < 10) { setError('Please enter a valid 10-digit number.'); return }
-    if (!agreed)            { setError('Please accept the consent to continue.'); return }
+    const trimmed = contact.trim()
+    const isEmail = /[a-zA-Z@]/.test(trimmed)
+    if (isEmail ? !isValidEmail(trimmed) : !isValidPhone(trimmed)) {
+      setError('Please enter a valid email or 10-digit WhatsApp number.')
+      return
+    }
+    if (!agreed) { setError('Please accept the consent to continue.'); return }
 
     setLoading(true)
 
-    const payload = { phone, ts: new Date().toISOString() }
+    const payload = isEmail
+      ? { email: trimmed, ts: new Date().toISOString() }
+      : { phone: trimmed, ts: new Date().toISOString() }
 
     const existing = JSON.parse(localStorage.getItem('cs_leads') || '[]') as unknown[]
     existing.push(payload)
@@ -71,11 +86,12 @@ export function PhoneForm({
     <form onSubmit={handleSubmit} noValidate>
       <div className="form-input-row">
         <input
-          type="tel"
-          inputMode="numeric"
-          value={phone}
-          onChange={handlePhoneChange}
-          placeholder="WhatsApp number"
+          type="text"
+          inputMode="text"
+          autoComplete="email tel"
+          value={contact}
+          onChange={handleContactChange}
+          placeholder="Email or WhatsApp number"
           className="flex-1 bg-transparent border-none outline-none px-6 h-14 font-body text-[0.9rem] font-normal text-fg placeholder:text-muted caret-accent"
         />
         <button
@@ -94,7 +110,7 @@ export function PhoneForm({
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => { setAgreed(e.target.checked); setError('') }}
         />
         <span className="font-body text-[0.68rem] text-muted leading-relaxed tracking-[0.02em]">
-          I agree to be contacted on WhatsApp with early access updates about CalibreSouth. No spam, ever.
+          I agree to be contacted by email or WhatsApp with early access updates about CalibreSouth. No spam, ever.
         </span>
       </label>
 

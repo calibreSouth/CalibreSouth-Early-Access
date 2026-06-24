@@ -30,7 +30,7 @@ export function CTASection() {
       <p className="cta-item font-body font-normal text-black/55 leading-relaxed mb-10 max-w-md text-caption">
         Something is about to change in Kozhikode.
         <br />
-        Leave your number - we'll find you when it's time.
+        Leave your email or WhatsApp number — we'll find you when it's time.
       </p>
       <div className="cta-item w-full max-w-md [&_.form-input-row]:bg-black [&_.form-input-row]:border-black/15 [&_label_span]:text-black/55 [&_input]:text-white [&_button]:bg-accent">
         <PhoneForm
